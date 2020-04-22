@@ -99,7 +99,8 @@
       <div class="album py-5 bg-light">
         <div class="container">
           <div class="row">
-            {% for project in projects.all %} 
+            {% for project in projects.all %}
+            <a href="{% url 'detail' %}">
             <div class="col-md-4">
               <div class="card mb-4 shadow-sm">
                 <img class="card-img-top" src="{{ project.image.url }}">
@@ -117,6 +118,7 @@
                 </div>
               </div>
             </div>
+            </a>
             {% endfor %}
           </div>
         </div>
